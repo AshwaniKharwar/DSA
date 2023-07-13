@@ -64,6 +64,7 @@ void levelOrderTravesal(Node* root){
 int main(){
     Node *root = NULL;
     buildTreeFromLevalOrderTraveral(root);
+    // 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
 
     levelOrderTravesal(root);
 }
