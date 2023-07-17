@@ -51,7 +51,7 @@ pair<int,int> solve(Node* root){
 
 }
 
-int maximumSumOfAdjancentNodes(Node* root){
+int maximumSumOfAdjancentNonNodes(Node* root){
     pair<int,int> ans = solve(root);
     return max(ans.first, ans.second);
 }
@@ -60,7 +60,7 @@ int main(){
     Node* root = createTree();
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
 
-    int ans = maximumSumOfAdjancentNodes(root);
+    int ans = maximumSumOfAdjancentNonNodes(root);
     cout<<"\n"<<ans<<"\n";
 
 
