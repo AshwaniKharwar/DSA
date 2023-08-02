@@ -94,8 +94,13 @@ Node* deleteFromBST(Node* root, int key){
             delete root;
             return temp;
         }
-
         if(root->left == NULL && root->right != NULL){
+            Node* temp = root->right;
+            delete root;
+            return temp;
+        }
+
+        if(root->left != NULL && root->right != NULL){
             int mini = minValue(root->right)->data;
             root->data = mini;
             root->right = deleteFromBST(root->right, mini);
